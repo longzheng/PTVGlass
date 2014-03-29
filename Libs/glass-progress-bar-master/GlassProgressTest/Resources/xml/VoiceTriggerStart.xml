@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trigger keyword="GlassProgressTest">
+	<!--<constraints network="true" /> // Include if your app trigger needs to connect to the internet-->
+	<!--<input prompt="My Prompt" noTouch="true" />  // No touch means don't ask for prompt when tapped on rather than spoken -->
+</trigger>

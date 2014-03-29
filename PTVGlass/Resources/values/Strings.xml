@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">PTVGlass</string>
+	<string name="trains_departing">trains departing</string>
+	<string name="getting_departures">Getting departures</string>
+	<string name="getting_location">Getting location</string>
+	<string name="getting_stopsnearyou">Getting stops near you</string>
+	<string name="trains_near_me">trains near me</string>
+	<string name="busses_near_me">busses near me</string>
+	<string name="trams_near_me">trams near me</string>
+</resources>

@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\MetroTrains\MainActivity.cs">
+    <Files>
+      <File FileName="..\..\..\..\MetroTrains\MainActivity.cs" Line="30" Column="4" />
+      <File FileName="..\..\..\..\MetroTrains\Resources\values\Strings.xml" Line="4" Column="47" />
+      <File FileName="..\..\..\..\MetroTrains\Resources\xml\VoiceTriggerStart.xml" Line="2" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Json.NET.Android.Sample" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Long\Documents\Projects\MetroTrains\MetroTrains\MainActivity.cs" line="33" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

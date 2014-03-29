@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B89D7882-FB37-468F-89DC-ED3652D01B1B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GlassProgressBar</RootNamespace>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>GlassProgressBar</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="SliderView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar_candy0001.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0002.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0003.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0004.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0005.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0006.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0007.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0008.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0009.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0010.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0011.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0012.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0013.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0014.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0015.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0016.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0017.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0018.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0019.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0020.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0021.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0022.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0023.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0024.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0025.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0026.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0027.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0028.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0029.png" />
+    <AndroidResource Include="Resources\drawable\bar_candy0030.png" />
+    <AndroidResource Include="Resources\drawable\slider_indeterminate.xml" />
+    <AndroidResource Include="Resources\layout\slider.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\ids.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\layout\" />
+  </ItemGroup>
+</Project>

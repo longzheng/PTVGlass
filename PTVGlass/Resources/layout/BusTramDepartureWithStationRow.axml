@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:padding="5dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/TextLineNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30dip"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:layout_marginRight="5dp" />
+        <TextView
+            android:id="@+id/TextLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30dip"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/TextTime"
+            android:layout_toRightOf="@+id/TextLineNum" />
+        <TextView
+            android:id="@+id/TextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dip"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/TextStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#cccccc"
+        android:textSize="20dip"
+        android:singleLine="true" />
+</LinearLayout>

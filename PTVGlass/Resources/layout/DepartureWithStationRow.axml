@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:orientation="horizontal"
+    android:padding="5dp">
+    <TextView
+        android:id="@+id/TextLineNum"
+        android:layout_width="fill_content"
+        android:layout_height="wrap_content"
+        android:textSize="32dip"
+        android:textColor="#ffffff"
+        android:singleLine="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/TextLineName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="32dip"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/TextTime"
+        android:layout_toRightOf="@+id/TextLineNum" />
+    <TextView
+        android:id="@+id/TextTime"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:textSize="32dip"
+        android:textColor="#ffffff"
+        android:singleLine="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right" />
+</RelativeLayout>
