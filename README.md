@@ -9,7 +9,7 @@ Melbourne public transport timetable on Google Glass. (C# Xamarin for Android/Go
 - List next departures for trains at specified City stops (via "trains departing, Southern Cross" voice/menu command)
 
 ##Download binary
-Download an APK to sideload to Google Glass via ADB.
+[Download an APK](https://github.com/longzheng/PTVGlass/releases) to sideload to Google Glass via ADB.
 
 ##Screenshots
 ![](http://longzheng.github.io/PTVGlass/ptvglass.png)
