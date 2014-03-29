@@ -62,14 +62,20 @@ namespace PTVGlass
 			var stopsNearby = await ptvApi.StopsNearby(location.Latitude, location.Longitude);
 
 			int stopLimit = 1;
+			int noStopsNearby = Resource.String.no_stops_nearby;
 			switch (transportType)
 			{
 				case TransportType.Bus:
+					stopLimit = 3;
+					noStopsNearby = Resource.String.no_bus_stops_nearby;
+					break;
 				case TransportType.Tram:
 					stopLimit = 3;
+					noStopsNearby = Resource.String.no_tram_stops_nearby;
 					break;
 				case TransportType.Train:
 					stopLimit = 1;
+					noStopsNearby = Resource.String.no_train_stops_nearby;
 					break;
 			}
 
@@ -81,7 +87,7 @@ namespace PTVGlass
 			if (stopsNearby.Count == 0)
 			{
 				var noStopsCard = new Card(this);
-				noStopsCard.SetText("No " + transportType.ToString().ToLower() + " stops nearby");
+				noStopsCard.SetText(noStopsNearby);
 				SetContentView(noStopsCard.ToView());
 				return;
 			}
@@ -99,7 +105,7 @@ namespace PTVGlass
 			if (nearByDepartures.Count == 0)
 			{
 				var noDeparturesCard = new Card(this);
-				noDeparturesCard.SetText("No upcoming departures scheduled");
+				noDeparturesCard.SetText(Resource.String.no_upcoming_departures);
 				SetContentView(noDeparturesCard.ToView());
 				return;
 			}

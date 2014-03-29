@@ -43,7 +43,7 @@ namespace PTVGlass
 				// show error card
 				var errorCard = new Card(this);
 				errorCard.SetText (e.ToString());
-				errorCard.SetFootnote ("Error");
+				errorCard.SetFootnote (Resource.String.error);
 				SetContentView (errorCard.ToView ());
 				return;
 			}
@@ -51,7 +51,7 @@ namespace PTVGlass
 			// if there are no departures, show no departure message
 			if (stationDepartures.Count == 0) {
 				var noDeparturesCard = new Card(this);
-				noDeparturesCard.SetText ("No upcoming departures scheduled");
+				noDeparturesCard.SetText (Resource.String.no_upcoming_departures);
 				SetContentView (noDeparturesCard.ToView ());
 				return;
 			}

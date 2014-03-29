@@ -290,6 +290,9 @@ namespace PTVGlass
 			// aapt resource value: 0x7f070006
 			public const int busses_near_me = 2131165190;
 			
+			// aapt resource value: 0x7f070009
+			public const int error = 2131165193;
+			
 			// aapt resource value: 0x7f070002
 			public const int getting_departures = 2131165186;
 			
@@ -298,6 +301,21 @@ namespace PTVGlass
 			
 			// aapt resource value: 0x7f070004
 			public const int getting_stopsnearyou = 2131165188;
+			
+			// aapt resource value: 0x7f07000a
+			public const int no_bus_stops_nearby = 2131165194;
+			
+			// aapt resource value: 0x7f07000d
+			public const int no_stops_nearby = 2131165197;
+			
+			// aapt resource value: 0x7f07000c
+			public const int no_train_stops_nearby = 2131165196;
+			
+			// aapt resource value: 0x7f07000b
+			public const int no_tram_stops_nearby = 2131165195;
+			
+			// aapt resource value: 0x7f070008
+			public const int no_upcoming_departures = 2131165192;
 			
 			// aapt resource value: 0x7f070001
 			public const int trains_departing = 2131165185;
