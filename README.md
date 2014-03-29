@@ -32,3 +32,5 @@ Put your key in `\PTVGlass\Services\PtvApi.cs`
 - [Leon Gouletsas](http://leon.gouletsas.com/) provided additional transport data
 - [Chris Hardy @ Xamarin](https://twitter.com/chrisntr)
 - C# tech support by [David Golden](https://twitter.com/GoldenTao) and [Rafael Rivera](https://twitter.com/withinrafael)
+
+(I'm a C# noob so please excuse any crappy code.)
