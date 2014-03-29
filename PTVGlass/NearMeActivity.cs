@@ -38,19 +38,23 @@ namespace PTVGlass
 			locationManager = GetSystemService(Context.LocationService) as LocationManager;
 			Criteria locationCriteria = new Criteria()
 			{
-				Accuracy = Accuracy.Coarse,
-				AltitudeRequired = false
+				Accuracy = Accuracy.Coarse, // we only need coarse location accuracy
+				AltitudeRequired = false // we're catching the bus, not planes
 			};
-			IList<string> providers = locationManager.GetProviders(locationCriteria, true);
 
+			// GDK documentation strictly indicates Glass uses dybamic location providers which means we must listen to all providers
+			// https://developers.google.com/glass/develop/gdk/location-sensors/index
+			IList<string> providers = locationManager.GetProviders(locationCriteria, true); 
 			foreach (string provider in providers)
 			{
-				locationManager.RequestLocationUpdates(provider, 1000, 1, this);
+				locationManager.RequestLocationUpdates(provider, 1000, 1, this); // provide updates at least every second
 			}
 		}
 
 		public async void NearbyDepartures(Location location)
 		{
+			var ptvApi = new PtvApi(); // new PTV API service
+
 			// Show loading screen
 			SetContentView(Resource.Layout.LoadingScreen);
 			var loadingText = FindViewById<TextView>(Resource.Id.loading_text);
@@ -58,9 +62,20 @@ namespace PTVGlass
 			var progressBar = FindViewById<SliderView>(Resource.Id.indeterm_slider);
 			progressBar.StartIndeterminate(); // start indeterminate progress bar
 
-			var ptvApi = new PtvApi();
-			var stopsNearby = await ptvApi.StopsNearby(location.Latitude, location.Longitude);
+			// try to call PTV API to get nearby stops
+			List<Stop> stopsNearby;
+			try{
+				stopsNearby = await ptvApi.StopsNearby(location.Latitude, location.Longitude);
+			}catch(Exception e){
+				// show error card
+				var errorCard = new Card(this);
+				errorCard.SetText (e.ToString());
+				errorCard.SetFootnote (Resource.String.error);
+				SetContentView (errorCard.ToView ());
+				return;
+			}
 
+			// depending on our mode of transport, we want different number of stops and error messages
 			int stopLimit = 1;
 			int noStopsNearby = Resource.String.no_stops_nearby;
 			switch (transportType)
@@ -79,6 +94,7 @@ namespace PTVGlass
 					break;
 			}
 
+			// Cull our stops nearby to just how many we want
 			stopsNearby = stopsNearby.Where(x =>
 				x.TransportType == transportType
 			).Take(stopLimit).ToList();
@@ -95,10 +111,11 @@ namespace PTVGlass
 			// Update loading text
 			loadingText.SetText(Resource.String.getting_departures);
 
+			// Get departures for each stop
 			List<Departure> nearByDepartures = new List<Departure>();
 			foreach (Stop stop in stopsNearby)
 			{
-				nearByDepartures.AddRange(await ptvApi.StationDepartures(stop.StopID, transportType, 1));
+				nearByDepartures.AddRange(await ptvApi.StationDepartures(stop.StopID, transportType, 1)); // merge departures together
 			}
 
 			// if there are no departures, show no departure message
@@ -141,11 +158,11 @@ namespace PTVGlass
 
 		public void OnLocationChanged(Location location)
 		{
+			// if location is within 500 meter accuracy, we'll accept it
 			if (location.Accuracy < 500)
 			{
-				locationManager.RemoveUpdates(this); // stop getting updates to save battery
-
-				NearbyDepartures(location);
+				locationManager.RemoveUpdates(this); // stop getting location updates to save battery
+				NearbyDepartures(location); // use the last known location to get nearby departures
 			}
 		}
 	}
