@@ -11,6 +11,7 @@ using Android.Widget;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Android.Locations;
+using ModernHttpClient;
 
 namespace PTVGlass
 {
@@ -58,14 +59,14 @@ namespace PTVGlass
 
 		public async Task<Newtonsoft.Json.Linq.JObject> callApi (Uri uri)
 		{
-			var httpClient = new HttpClient ();
+			var httpClient = new HttpClient(new OkHttpNetworkHandler());
 			string contents = await httpClient.GetStringAsync(uri);
 			return Newtonsoft.Json.Linq.JObject.Parse (contents);
 		}
 
 		public async Task<Newtonsoft.Json.Linq.JArray> callApiArray (Uri uri)
 		{
-			var httpClient = new HttpClient ();
+			var httpClient = new HttpClient(new OkHttpNetworkHandler());
 			string contents = await httpClient.GetStringAsync(uri);
 			return Newtonsoft.Json.Linq.JArray.Parse (contents);
 		}

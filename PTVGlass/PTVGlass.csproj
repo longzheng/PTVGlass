@@ -41,6 +41,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ModernHttpClient.Android">
+      <HintPath>..\Components\modernhttpclient-1.2.1\lib\android\ModernHttpClient.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="OkHttp">
+      <HintPath>..\Components\modernhttpclient-1.2.1\lib\android\OkHttp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -99,6 +105,10 @@
     <XamarinComponentReference Include="json.net">
       <Version>4.5.11</Version>
       <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="modernhttpclient">
+      <Visible>False</Visible>
+      <Version>1.2.1</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
