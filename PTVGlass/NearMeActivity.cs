@@ -81,11 +81,11 @@ namespace PTVGlass
 			switch (transportType)
 			{
 				case TransportType.Bus:
-					stopLimit = 3;
+					stopLimit = 6;
 					noStopsNearby = Resource.String.no_bus_stops_nearby;
 					break;
 				case TransportType.Tram:
-					stopLimit = 3;
+					stopLimit = 6;
 					noStopsNearby = Resource.String.no_tram_stops_nearby;
 					break;
 				case TransportType.Train:
