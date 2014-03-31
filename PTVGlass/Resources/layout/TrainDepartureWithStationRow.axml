@@ -15,8 +15,7 @@
             android:textColor="#ffffff"
             android:textSize="30dip"
             android:singleLine="true"
-            android:layout_toLeftOf="@+id/TextTime"
-            android:layout_toRightOf="@+id/TextLineNum" />
+            android:layout_toLeftOf="@+id/TextTime" />
         <TextView
             android:id="@+id/TextTime"
             android:layout_width="wrap_content"
