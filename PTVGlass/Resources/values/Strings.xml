@@ -9,7 +9,7 @@
 	<string name="busses_near_me">buses near me</string>
 	<string name="trams_near_me">trams near me</string>
 	<string name="no_upcoming_departures">No upcoming departures scheduled</string>
-	<string name="error">Error</string>
+	<string name="no_internet_connection">Not connected to the internet</string>
 	<string name="no_bus_stops_nearby">No bus stops nearby</string>
 	<string name="no_tram_stops_nearby">No tram stops nearby</string>
 	<string name="no_train_stops_nearby">No train stops nearby</string>

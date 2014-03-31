@@ -70,8 +70,8 @@ namespace PTVGlass
 				// show error card
 				var errorCard = new Card(this);
 				errorCard.SetText (e.ToString());
-				errorCard.SetFootnote (Resource.String.error);
 				SetContentView (errorCard.ToView ());
+
 				return;
 			}
 
@@ -102,9 +102,11 @@ namespace PTVGlass
 			// if there are no stops nearby, show no stops message
 			if (stopsNearby.Count == 0)
 			{
-				var noStopsCard = new Card(this);
-				noStopsCard.SetText(noStopsNearby);
-				SetContentView(noStopsCard.ToView());
+				// Show error screen
+				SetContentView (Resource.Layout.ErrorScreen);
+				var errorText = FindViewById<TextView> (Resource.Id.error_text);
+				errorText.SetText(noStopsNearby); // set error text
+
 				return;
 			}
 

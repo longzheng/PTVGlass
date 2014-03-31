@@ -79,6 +79,8 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\layout\BusTramDepartureWithStationRow.axml" />
+    <AndroidResource Include="Resources\drawable\ic_warning_50.png" />
+    <AndroidResource Include="Resources\layout\ErrorScreen.axml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -107,8 +109,8 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="modernhttpclient">
-      <Visible>False</Visible>
       <Version>1.2.1</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>

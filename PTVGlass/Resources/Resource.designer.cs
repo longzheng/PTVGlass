@@ -190,16 +190,19 @@ namespace PTVGlass
 			public const int BusIcon = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int Icon = 2130837535;
+			public const int ic_warning_50 = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int slider_indeterminate = 2130837536;
+			public const int Icon = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int TrainIcon = 2130837537;
+			public const int slider_indeterminate = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int TramIcon = 2130837538;
+			public const int TrainIcon = 2130837538;
+			
+			// aapt resource value: 0x7f020023
+			public const int TramIcon = 2130837539;
 			
 			static Drawable()
 			{
@@ -227,7 +230,13 @@ namespace PTVGlass
 			public const int TextTime = 2131099652;
 			
 			// aapt resource value: 0x7f060007
-			public const int indeterm_slider = 2131099655;
+			public const int error_icon = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int error_text = 2131099656;
+			
+			// aapt resource value: 0x7f060009
+			public const int indeterm_slider = 2131099657;
 			
 			// aapt resource value: 0x7f060001
 			public const int indeterminate_slider = 2131099649;
@@ -235,8 +244,8 @@ namespace PTVGlass
 			// aapt resource value: 0x7f060006
 			public const int listview = 2131099654;
 			
-			// aapt resource value: 0x7f060008
-			public const int loading_text = 2131099656;
+			// aapt resource value: 0x7f06000a
+			public const int loading_text = 2131099658;
 			
 			// aapt resource value: 0x7f060000
 			public const int slider_control = 2131099648;
@@ -261,16 +270,19 @@ namespace PTVGlass
 			public const int DepartureScreen = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int LoadingScreen = 2130903042;
+			public const int ErrorScreen = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int slider = 2130903043;
+			public const int LoadingScreen = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int TrainDepartureRow = 2130903044;
+			public const int slider = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int TrainDepartureWithStationRow = 2130903045;
+			public const int TrainDepartureRow = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int TrainDepartureWithStationRow = 2130903046;
 			
 			static Layout()
 			{
@@ -291,9 +303,6 @@ namespace PTVGlass
 			// aapt resource value: 0x7f070007
 			public const int busses_near_me = 2131165191;
 			
-			// aapt resource value: 0x7f07000a
-			public const int error = 2131165194;
-			
 			// aapt resource value: 0x7f070003
 			public const int getting_departures = 2131165187;
 			
@@ -308,6 +317,9 @@ namespace PTVGlass
 			
 			// aapt resource value: 0x7f07000b
 			public const int no_bus_stops_nearby = 2131165195;
+			
+			// aapt resource value: 0x7f07000a
+			public const int no_internet_connection = 2131165194;
 			
 			// aapt resource value: 0x7f07000e
 			public const int no_stops_nearby = 2131165198;
