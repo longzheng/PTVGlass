@@ -1,3 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<trigger keyword="@string/trains_departing" />
+<trigger keyword="@string/trains_departing">
+	<constraints network="true" />
+</trigger>

@@ -1,3 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<trigger keyword="@string/trains_near_me" />
+<trigger keyword="@string/trains_near_me">
+	<constraints network="true" />
+</trigger>
