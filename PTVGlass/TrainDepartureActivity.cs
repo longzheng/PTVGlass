@@ -24,6 +24,14 @@ namespace PTVGlass
 		{
 			base.OnCreate (bundle);
 
+			// Show loading screen
+ 			SetContentView (Resource.Layout.LoadingScreen);
+ 			var loadingText = FindViewById<TextView> (Resource.Id.loading_text);
+ 			loadingText.SetText(Resource.String.getting_departures); // set loading text
+ 			var progressBar = FindViewById<SliderView> (Resource.Id.indeterm_slider);
+ 			progressBar.StartIndeterminate (); // start indeterminate progress bar
+ 
+
 			// get station ID from intent
 			int intentStationId = int.Parse(Intent.GetStringExtra ("stationId"));
 
