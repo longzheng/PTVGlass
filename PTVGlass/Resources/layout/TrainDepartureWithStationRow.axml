@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/TextLine"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:textSize="30dip"
@@ -18,7 +18,7 @@
             android:layout_toLeftOf="@+id/TextTime" />
         <TextView
             android:id="@+id/TextTime"
-            android:layout_width="wrap_content"
+            android:layout_width="120dip"
             android:layout_height="wrap_content"
             android:textSize="30dip"
             android:textColor="#ffffff"
