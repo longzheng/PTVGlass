@@ -70,7 +70,7 @@ namespace PTVGlass
 				// show error card
 				var errorCard = new Card(this);
 				errorCard.SetText (e.ToString());
-				SetContentView (errorCard.ToView ());
+				SetContentView (errorCard.View);
 
 				return;
 			}
@@ -125,7 +125,7 @@ namespace PTVGlass
 			{
 				var noDeparturesCard = new Card(this);
 				noDeparturesCard.SetText(Resource.String.no_upcoming_departures);
-				SetContentView(noDeparturesCard.ToView());
+				SetContentView(noDeparturesCard.View);
 				return;
 			}
 

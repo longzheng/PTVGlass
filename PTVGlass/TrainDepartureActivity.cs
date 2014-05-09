@@ -44,7 +44,7 @@ namespace PTVGlass
 				// show error card
 				var errorCard = new Card(this);
 				errorCard.SetText (e.ToString());
-				SetContentView (errorCard.ToView ());
+				SetContentView (errorCard.View);
 
 				return;
 			}
