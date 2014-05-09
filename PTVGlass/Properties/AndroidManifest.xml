@@ -3,6 +3,6 @@
 	<uses-sdk />
 	<application android:label="PTVGlass" android:icon="@drawable/icon"></application>
 	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>

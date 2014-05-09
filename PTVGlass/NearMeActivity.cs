@@ -38,7 +38,7 @@ namespace PTVGlass
 			locationManager = GetSystemService(Context.LocationService) as LocationManager;
 			Criteria locationCriteria = new Criteria()
 			{
-				Accuracy = Accuracy.Coarse, // we only need coarse location accuracy
+				Accuracy = Accuracy.Medium, // we need medium location accuracy
 				AltitudeRequired = false // we're catching the bus, not planes
 			};
 
@@ -160,8 +160,8 @@ namespace PTVGlass
 
 		public void OnLocationChanged(Location location)
 		{
-			// if location is within 500 meter accuracy, we'll accept it
-			if (location.Accuracy < 500)
+			// if location is within 300 meter accuracy, we'll accept it
+			if (location.Accuracy < 300)
 			{
 				locationManager.RemoveUpdates(this); // stop getting location updates to save battery
 				NearbyDepartures(location); // use the last known location to get nearby departures
