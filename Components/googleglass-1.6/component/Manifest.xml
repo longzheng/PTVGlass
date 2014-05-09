@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="googleglass">
+  <name>Glass Development Kit (Developer Preview)</name>
+  <publisher>Xamarin Inc.</publisher>
+  <publisher-url>http://xamarin.com</publisher-url>
+  <version>1.6</version>
+  <summary>Build Glassware that runs directly on Glass XE16.</summary>
+  <samples>
+    <sample id="HelloGlassWorld">
+      <name>Hello Glass</name>
+      <summary>Hello Glass</summary>
+    </sample>
+  </samples>
+</component>
