@@ -62,7 +62,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PtvApi.cs" />
-    <Compile Include="TrainsDepartingActivity.cs" />
     <Compile Include="NearMeActivity.cs" />
     <Compile Include="Helper\RelativeTime.cs" />
     <Compile Include="Models\PTV.cs" />
