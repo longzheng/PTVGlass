@@ -19,6 +19,8 @@ namespace PTVGlass
 	{
 		LocationManager locationManager;
 		TransportType transportType;
+		GestureDetector _gestureDetector;
+		HeadListView headListView;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -44,7 +46,7 @@ namespace PTVGlass
 
 			// GDK documentation strictly indicates Glass uses dybamic location providers which means we must listen to all providers
 			// https://developers.google.com/glass/develop/gdk/location-sensors/index
-			IList<string> providers = locationManager.GetProviders(locationCriteria, true); 
+			IList<string> providers = locationManager.GetProviders(locationCriteria, true);
 			foreach (string provider in providers)
 			{
 				locationManager.RequestLocationUpdates(provider, 1000, 1, this); // provide updates at least every second
@@ -64,13 +66,16 @@ namespace PTVGlass
 
 			// try to call PTV API to get nearby stops
 			List<Stop> stopsNearby;
-			try{
+			try
+			{
 				stopsNearby = await ptvApi.StopsNearby(location.Latitude, location.Longitude);
-			}catch(Exception e){
+			}
+			catch (Exception e)
+			{
 				// show error card
 				var errorCard = new Card(this);
-				errorCard.SetText (e.ToString());
-				SetContentView (errorCard.View);
+				errorCard.SetText(e.ToString());
+				SetContentView(errorCard.View);
 
 				return;
 			}
@@ -103,8 +108,8 @@ namespace PTVGlass
 			if (stopsNearby.Count == 0)
 			{
 				// Show error screen
-				SetContentView (Resource.Layout.ErrorScreen);
-				var errorText = FindViewById<TextView> (Resource.Id.error_text);
+				SetContentView(Resource.Layout.ErrorScreen);
+				var errorText = FindViewById<TextView>(Resource.Id.error_text);
 				errorText.SetText(noStopsNearby); // set error text
 
 				return;
@@ -130,20 +135,35 @@ namespace PTVGlass
 			}
 
 			// show departures list screen
-			ListView listView;
 			SetContentView(Resource.Layout.DepartureScreen);
-			listView = FindViewById<ListView>(Resource.Id.listview);
+			headListView = FindViewById<HeadListView>(Resource.Id.listview);
 			// get the right type of screen adapter for the right type of transport
 			if (transportType == TransportType.Train)
 			{
 				// we don't need the train "number" for nearby trains
-				listView.Adapter = new NearbyTrainScreenAdapter(this, nearByDepartures); // bind list of station departures to listView
+				headListView.Adapter = new NearbyTrainScreenAdapter(this, nearByDepartures); // bind list of station departures to listView
 			}
 			else
 			{
-				listView.Adapter = new NearbyBusTramScreenAdapter(this, nearByDepartures); // bind list of station departures to listView
+				headListView.Adapter = new NearbyBusTramScreenAdapter(this, nearByDepartures); // bind list of station departures to listView
 			}
-			listView.RequestFocus(); // set focus on the listView so scrolling works on the list
+			headListView.activate();
+		}
+
+		protected override void OnResume()
+		{
+			if (headListView != null)
+				headListView.activate();
+
+			base.OnResume();
+		}
+
+		protected override void OnPause()
+		{
+			if (headListView != null)
+				headListView.deactivate();
+
+			base.OnPause();
 		}
 
 		public void OnProviderEnabled(string provider)
