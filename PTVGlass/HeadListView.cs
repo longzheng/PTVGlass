@@ -82,7 +82,7 @@ namespace PTVGlass
 				return;
 
 			SensorManager.GetRotationMatrixFromVector(mat, e.Values.ToArray());
-			SensorManager.RemapCoordinateSystem(mat, Android.Hardware.Axis.X, Android.Hardware.Axis.Y, mat);
+			SensorManager.RemapCoordinateSystem(mat, Android.Hardware.Axis.X, Android.Hardware.Axis.Z, mat);
 			SensorManager.GetOrientation(mat, orientation);
 
 			float z = orientation[0], // see https://developers.google.com/glass/develop/gdk/location-sensors/index
